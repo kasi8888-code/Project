@@ -122,15 +122,18 @@ backend:
 
   - task: "Task Management API"
     implemented: true
-    working: "pending_test" 
+    working: true
     file: "/app/backend/server.py"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: "pending_test"
         agent: "main"
         comment: "Implemented complete task CRUD with status, priority, due dates, project association"
+      - working: true
+        agent: "testing"
+        comment: "Task Management API is fully functional. Successfully tested creating, reading, updating, and deleting tasks. Status and priority updates work correctly. Minor issue: Getting a deleted task returns 500 instead of 404, but deletion itself works properly."
 
   - task: "Project Management API"
     implemented: true
