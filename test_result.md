@@ -152,15 +152,18 @@ backend:
 
   - task: "Dashboard Stats API"
     implemented: true
-    working: "pending_test"
+    working: true
     file: "/app/backend/server.py"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: "pending_test"
         agent: "main"
         comment: "Created comprehensive stats endpoint for dashboard with task and project metrics"
+      - working: true
+        agent: "testing"
+        comment: "Dashboard Stats API is working correctly. The endpoint returns accurate statistics for tasks and projects, including counts for total, completed, and pending tasks, as well as high priority tasks. Project stats are also accurate."
 
 frontend:
   - task: "React Frontend Setup"
