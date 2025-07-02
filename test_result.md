@@ -107,15 +107,18 @@ user_problem_statement: "Full-stack Todo List web application with React.js fron
 backend:
   - task: "FastAPI Server Setup"
     implemented: true
-    working: "pending_test"
+    working: true
     file: "/app/backend/server.py"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: "pending_test"
         agent: "main"
         comment: "Created complete FastAPI backend with MongoDB integration, task and project CRUD operations, dashboard stats endpoint, and all necessary models"
+      - working: true
+        agent: "testing"
+        comment: "Server health check endpoint (/api/) is working correctly. The server is running and responding with the expected message."
 
   - task: "Task Management API"
     implemented: true
