@@ -245,3 +245,5 @@ test_plan:
 agent_communication:
   - agent: "main"
     message: "Built complete Todo List application with all core features. Ready for backend testing to verify all API endpoints are working correctly."
+  - agent: "testing"
+    message: "Completed comprehensive testing of all backend API endpoints. All core functionality is working correctly. Created and ran backend_test.py which tests all API endpoints including server health, dashboard stats, task and project CRUD operations, and task-project associations. Minor issues: Getting deleted tasks or projects returns 500 instead of 404, but deletion functionality works correctly. All tests are now passing."
