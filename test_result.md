@@ -137,15 +137,18 @@ backend:
 
   - task: "Project Management API"
     implemented: true
-    working: "pending_test"
+    working: true
     file: "/app/backend/server.py"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: "pending_test"
         agent: "main"
         comment: "Implemented project CRUD operations with task associations and project-specific task retrieval"
+      - working: true
+        agent: "testing"
+        comment: "Project Management API is working correctly. Successfully tested creating, reading, updating, and deleting projects. Project-task associations work as expected. Minor issue: Getting a deleted project returns 500 instead of 404, but deletion itself works properly and also removes associated tasks."
 
   - task: "Dashboard Stats API"
     implemented: true
